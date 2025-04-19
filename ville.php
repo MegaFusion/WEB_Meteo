@@ -1,4 +1,8 @@
 <?php
+/** 
+ * Page localisation et méteo des villes
+ * Affiche les méteo d'une ville apres avoir localisé
+ */
 $title = "Localisation de la ville";
 $description = "La Page Meteo d'une ville";
 require_once "./include/cookies.inc.php";
