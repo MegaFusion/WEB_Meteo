@@ -1,4 +1,8 @@
 <?php
+/** 
+ * Page Statistiques du site 
+ * Affiche une Histogramme avec les noms des villes et nombres de consultations
+ */
 $title = "Statistiques des villes";
 $description = "page de Statistiques";
 require_once "./include/cookies.inc.php";
