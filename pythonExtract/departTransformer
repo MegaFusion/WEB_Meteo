@@ -1,0 +1,56 @@
+import re
+import os
+
+def extraire_regions(input_file):
+    # Vérifier si le fichier d'entrée existe
+    if not os.path.exists(input_file):
+        print(f"❌ Le fichier d'entrée '{input_file}' n'existe pas.")
+        return []
+
+    # Initialiser une liste pour stocker les résultats
+    regions = []
+
+    # Ouvrir et lire le fichier d'entrée
+    with open(input_file, "r", encoding="utf-8") as file:
+        data = file.read()
+
+    # Utiliser une expression régulière pour extraire les noms des régions et les coordonnées
+    # Nous permettons également d'extraire des lettres dans les coordonnées
+    matches = re.findall(r'---\s*(.*?)\s---\s*([a-zA-Z0-9,.\s-]+)', data)
+    
+    for match in matches:
+        nom_region = match[0].strip()  # Nom de la région (ex: "Martinique")
+        coords = match[1].replace("\n", "").strip()  # Coordonnées (longue chaîne de nombres ou lettres)
+        
+        # Générer un lien basé sur le nom de la région
+        lien = nom_region.lower().replace(" ", "_") + ".html"
+        
+        # Ajouter à la liste des régions sous forme de liste ["lien", "nom", "coordonnées"]
+        regions.append([f'"{lien}"', f'"{nom_region}"', f'"{coords}"'])
+    
+    return regions
+
+def enregistrer_regions(regions, output_file):
+    # Créer le dossier de sortie si nécessaire
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
+    # Enregistrer les régions extraites dans un fichier de sortie
+    with open(output_file, "w", encoding="utf-8") as file:
+        for region in regions:
+            # Convertir la liste ["lien", "nom", "coordonnées"] en chaîne formatée
+            ligne = f"[{', '.join(region)}]\n"
+            file.write(ligne)
+
+# Exemple d'utilisation
+input_file = "C:/Devoir/Developpement_WEB/Meteo/pages/pythonExtract/depart.txt"  # Chemin vers ton fichier d'entrée
+output_file = "C:/Devoir/Developpement_WEB/Meteo/pages/pythonExtract/result.txt"  # Spécifie ton chemin de sortie
+
+# Extraire les données du fichier d'entrée
+regions_extraite = extraire_regions(input_file)
+
+# Si des régions ont été extraites, les enregistrer dans un fichier de sortie
+if regions_extraite:
+    enregistrer_regions(regions_extraite, output_file)
+    print(f"✅ Extraction terminée. Les données ont été enregistrées dans : {output_file}")
+else:
+    print("❌ Aucune donnée extraite. Vérifiez le fichier d'entrée.")
