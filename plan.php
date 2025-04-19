@@ -1,4 +1,7 @@
 <?php
+/** 
+ * Page avec le Plan et Annexes du site
+ */
 $title = "Plan du site";
 $description = "Le plan du site";
 $h1 = "Méteo";
