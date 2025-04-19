@@ -1,4 +1,8 @@
 <?php
+/** 
+ * Page pour la carte interactive
+ * Affiche une carte de France avec les regions et departments
+ */
 $title = "Carte De France";
 $description = "Carte de localisation";
 $depart = $_GET['depart'] ?? null;
