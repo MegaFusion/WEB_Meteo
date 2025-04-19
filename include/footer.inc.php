@@ -1,3 +1,8 @@
+<?php
+/**
+ * Fichier include pour le footer
+ */
+?>
 <footer>
 	<ul>
 		<li><strong><a href="plan.php">Annexe et Plan du site</a></strong></li>		

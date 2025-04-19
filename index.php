@@ -1,4 +1,9 @@
+
 <?php
+/**
+ * Page D'accueil pour le site
+ */
+
 $title = "Bienvenue dans l'Accueil";
 $h1 = "Méteo";
 $description = "La page d'accueil";

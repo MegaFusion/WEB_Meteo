@@ -1,4 +1,8 @@
 <?php
+/**
+ * Fichier include pour le header
+ */
+
 if (isset($_GET['style'])){
 	$style = ($_GET['style'] === 'alternatif') ? 'alternatif' : 'standard';
 	setcookie('style', $style, time() + (86400 * 3), '/');
