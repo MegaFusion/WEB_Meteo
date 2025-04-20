@@ -1,4 +1,9 @@
+
 <?php
+/**
+ * Page D'accueil pour le site
+ */
+
 $title = "Bienvenue dans l'Accueil";
 $h1 = "Méteo";
 $description = "La page d'accueil";
@@ -15,8 +20,9 @@ $allFiles = scandir(__DIR__ . '/photos');
 		$cheminImage = '';
 	}
 
-require_once "./include/cookies.inc.php";
+
 require_once "./include/headerIndex.inc.php";
+require_once "./include/cookies.inc.php";
 require_once "./include/functions.inc.php";
 ?>
 <main>

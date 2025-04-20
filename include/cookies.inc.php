@@ -1,4 +1,8 @@
 <?php
+/**
+ * Fichier include pour le formulaire de gestion des cookies
+ */
+
 $demandeCookie='cookies_acceptes';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['consentement'])) {

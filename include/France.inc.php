@@ -1,4 +1,8 @@
 <?php
+/**
+ * Fichier include pour la gestion de la map interactive
+ */
+
 require_once "./include/functions.inc.php";
 echo "
 

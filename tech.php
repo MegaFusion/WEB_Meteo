@@ -1,8 +1,13 @@
 <?php
+/** 
+ * Page Tech du site 
+ * Affiche les images du jours de nasa et usi l'info avec localisation
+ */
 $title = "Tech";
 $description = "La Page TECH";
-require_once "./include/cookies.inc.php";
+
 require_once "./include/header.inc.php";
+require_once "./include/cookies.inc.php";
 require_once "./include/functions.inc.php";
 
 $api_key = "JPLPbMyBJWPkGuhMmCHEPtGBvfoGD0ZIeSYxWDB6";

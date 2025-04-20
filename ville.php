@@ -1,8 +1,13 @@
 <?php
+/** 
+ * Page localisation et méteo des villes
+ * Affiche les méteo d'une ville apres avoir localisé
+ */
 $title = "Localisation de la ville";
 $description = "La Page Meteo d'une ville";
-require_once "./include/cookies.inc.php";
+
 require_once "./include/header.inc.php";
+require_once "./include/cookies.inc.php";
 require_once "./include/functions.inc.php";
 
 $depart = $_GET['depart'] ?? '';
@@ -94,7 +99,7 @@ if ($cookieValide && !empty($_COOKIE[$cookieNom])) {
 					echo "
 					<h2>Ou entrez un departement en France</h2>
 					<form method=\"GET\" action=\"". htmlspecialchars($_SERVER['REQUEST_URI']). "\">
-					<input type=\"hidden\" name=\"region\" value=\"". htmlspecialchars($selectedRegion) ."\">
+					<input type=\"hidden\" name=\"region\" value=\"". htmlspecialchars($selectedRegion) ."\"/>
             		<label for=\"depart\">Departement</label>
             		<input list=\"departs\" id=\"depart\" name=\"depart\" value=\"". htmlspecialchars($selectedDepartment) ."\" />
 
@@ -112,7 +117,7 @@ if ($cookieValide && !empty($_COOKIE[$cookieNom])) {
 					echo "
 					<h2>Entrez Le departement</h2>
 					<form method=\"GET\" action=\"". htmlspecialchars($_SERVER['REQUEST_URI']). "\">
-					<input type=\"hidden\" name=\"region\" value=\"". htmlspecialchars($selectedRegion) ."\">
+					<input type=\"hidden\" name=\"region\" value=\"". htmlspecialchars($selectedRegion) ."\" />
             		<label for=\"depart\">Departement</label>
             		<input list=\"departs\" id=\"depart\" name=\"depart\" value=\"". htmlspecialchars($selectedDepartment) ."\" />
             		<datalist id=\"departs\">
@@ -134,7 +139,7 @@ if ($cookieValide && !empty($_COOKIE[$cookieNom])) {
 		"<h2>Entrez une ville en France</h2>
 		<form method=\"POST\">
 			<label for=\"ville\">Ville</label>
-			<input list=\"villes\" name=\"ville\" id=\"ville\" value=\"". enleverAccents(htmlspecialchars($selectedCity ?? '')) ."\">
+			<input list=\"villes\" name=\"ville\" id=\"ville\" value=\"". enleverAccents(htmlspecialchars($selectedCity ?? '')) ."\"/>
 			<datalist id=\"villes\">";
 						echo afficheDataCity("ressources/csv/cities.csv",getNumeroDepartement("ressources/csv/departments.csv",$depart));
 				echo "</datalist>
