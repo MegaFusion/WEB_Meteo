@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Projet Méteo Climascope
 Logiciel de consultation méteo
 
@@ -11,8 +10,8 @@ Ce site permet de voir le temps qu'il fait où qu'on soit dans le pays Français
 - Verifier les stats des villes consultées dans la page `Statistiques`
 
 ## Auteurs
-RAZOLIFERASON Tsanta
-ZURKHANG Tenzin
+* RAZOLIFERASON Tsanta
+* ZURKHANG Tenzin
 
 ## Technologies
 - HTML / CSS
@@ -59,7 +58,3 @@ Dossier du projet/
 2. Placer les fichiers dans un nouveau dossier et puis le mettre dans `htdocs/`
 3. Lancer Apache
 4. Accéder via le navigateur à `http://localhost/nomDuDossier/index.php`
-=======
-# WEB_Meteo
-Developpement web pour le projet S4
->>>>>>> 218932f6ad10015f41bba5f9959ef9a15a88bf2e
