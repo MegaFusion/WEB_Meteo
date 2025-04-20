@@ -99,7 +99,7 @@ if ($cookieValide && !empty($_COOKIE[$cookieNom])) {
 					echo "
 					<h2>Ou entrez un departement en France</h2>
 					<form method=\"GET\" action=\"". htmlspecialchars($_SERVER['REQUEST_URI']). "\">
-					<input type=\"hidden\" name=\"region\" value=\"". htmlspecialchars($selectedRegion) ."\">
+					<input type=\"hidden\" name=\"region\" value=\"". htmlspecialchars($selectedRegion) ."\"/>
             		<label for=\"depart\">Departement</label>
             		<input list=\"departs\" id=\"depart\" name=\"depart\" value=\"". htmlspecialchars($selectedDepartment) ."\" />
 
