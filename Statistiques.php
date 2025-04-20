@@ -5,8 +5,9 @@
  */
 $title = "Statistiques des villes";
 $description = "page de Statistiques";
-require_once "./include/cookies.inc.php";
+
 require_once "./include/header.inc.php";
+require_once "./include/cookies.inc.php";
 require_once "./include/functions.inc.php";
 
 ?>
@@ -65,10 +66,10 @@ require_once "./include/functions.inc.php";
             </tbody>\n
             </table>\n";
             echo "
-            <form action=\"\" method=\"POST\">
-                <input type=\"hidden\" name=\"reset\" value=\"1\"/>
-                <input type=\"submit\" onclick=\"return confirm('Etes vous sûr de vouloir tout effacer ?');\" value=\"EFFACER TOUT\"/>
-            </form>";
+			<form action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" method=\"POST\">
+				<input type=\"hidden\" name=\"reset\" value=\"1\"/>
+				<input type=\"submit\" onclick=\"return confirm('Etes vous sûr de vouloir tout effacer ?');\" value=\"EFFACER TOUT\"/>
+			</form>";
             }
             else{
             echo "

@@ -6,8 +6,9 @@
 $title = "Carte De France";
 $description = "Carte de localisation";
 $depart = $_GET['depart'] ?? null;
-require_once "./include/cookies.inc.php";
+
 require_once "./include/header.inc.php";
+require_once "./include/cookies.inc.php";
 require_once "./include/functions.inc.php";
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
     if (isset($_GET['depart'])){

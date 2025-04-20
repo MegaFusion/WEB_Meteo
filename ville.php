@@ -5,8 +5,9 @@
  */
 $title = "Localisation de la ville";
 $description = "La Page Meteo d'une ville";
-require_once "./include/cookies.inc.php";
+
 require_once "./include/header.inc.php";
+require_once "./include/cookies.inc.php";
 require_once "./include/functions.inc.php";
 
 $depart = $_GET['depart'] ?? '';
