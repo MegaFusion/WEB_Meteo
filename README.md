@@ -34,14 +34,14 @@ Dossier du projet/
 ├─ styles.css
 ├─ style_alternatif.css
 ├─ include/
-    ├─ cookies.inc.php
-    ├─ footer.inc.php
-    ├─ France.inc.php
-    ├─ functions.inc.php
-    ├─ header.inc.php
-    └─ headerIndex.inc.php
+|    ├─ cookies.inc.php
+|    ├─ footer.inc.php
+|    ├─ France.inc.php
+|    ├─ functions.inc.php
+|    ├─ header.inc.php
+|    └─ headerIndex.inc.php
 ├─ stockage/
-    └─ consultations.csv
+|    └─ consultations.csv
 └─ ressources/
     └─ csv/
         ├─ cities.csv
