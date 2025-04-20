@@ -117,7 +117,7 @@ if ($cookieValide && !empty($_COOKIE[$cookieNom])) {
 					echo "
 					<h2>Entrez Le departement</h2>
 					<form method=\"GET\" action=\"". htmlspecialchars($_SERVER['REQUEST_URI']). "\">
-					<input type=\"hidden\" name=\"region\" value=\"". htmlspecialchars($selectedRegion) ."\">
+					<input type=\"hidden\" name=\"region\" value=\"". htmlspecialchars($selectedRegion) ."\" />
             		<label for=\"depart\">Departement</label>
             		<input list=\"departs\" id=\"depart\" name=\"depart\" value=\"". htmlspecialchars($selectedDepartment) ."\" />
             		<datalist id=\"departs\">
