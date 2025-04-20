@@ -139,7 +139,7 @@ if ($cookieValide && !empty($_COOKIE[$cookieNom])) {
 		"<h2>Entrez une ville en France</h2>
 		<form method=\"POST\">
 			<label for=\"ville\">Ville</label>
-			<input list=\"villes\" name=\"ville\" id=\"ville\" value=\"". enleverAccents(htmlspecialchars($selectedCity ?? '')) ."\">
+			<input list=\"villes\" name=\"ville\" id=\"ville\" value=\"". enleverAccents(htmlspecialchars($selectedCity ?? '')) ."\"/>
 			<datalist id=\"villes\">";
 						echo afficheDataCity("ressources/csv/cities.csv",getNumeroDepartement("ressources/csv/departments.csv",$depart));
 				echo "</datalist>
